@@ -1,5 +1,8 @@
 #to override Clearance default method for user_from_params
 class UsersController < Clearance::UsersController
+
+  private
+
   def user_from_params
     first_name = user_params.delete(:first_name)
     last_name = user_params.delete(:last_name)

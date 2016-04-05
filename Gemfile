@@ -29,6 +29,12 @@ gem 'clearance'
 #gem to ensure app is securely configured (to make sure important passwords/private keys are kept separately and securely-creates a yml file)
 gem 'figaro'
 
+#gem omniauth (like a parent gem[general]..omniauth-facebook is more specific for facebook only)
+gem 'omniauth'
+
+#gem to enable login through facebook
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
