@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #gem for authentication with email and password
 gem 'clearance'
 
+#gem to ensure app is securely configured (to make sure important passwords/private keys are kept separately and securely-creates a yml file)
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
