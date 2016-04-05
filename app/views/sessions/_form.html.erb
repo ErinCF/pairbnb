@@ -1,7 +1,7 @@
 <%= form_for :session, url: session_path do |form| %>
   <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
+    <%= form.label :email %> <!-- by default, this uses the default settings that call humanize() makes first letter capitals and the rest downcase -->
+    <%= form.text_field :email, type: 'email', placeholder: "email@gmail.com" %>
   </div>
 
   <div class="password-field">
