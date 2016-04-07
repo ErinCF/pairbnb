@@ -6,8 +6,12 @@ class User < ActiveRecord::Base
 
   def self.create_with_auth_and_hash(authentication,auth_hash)
     create! do |u|
-      byebug
-      u.first_name = auth_hash["info"]["first_name"]
+      name = auth_hash["info"]["name"]
+      #split the name obtained from fb to first name and last name
+      name = name.strip.split(/\s+/)
+      #pass the values to be stored in database
+      u.first_name = name[0]
+      u.last_name = name[1]
       u.email = auth_hash["extra"]["raw_info"]["email"]
       #randomly generate password to be passed to Clearance during login with Facebook
       u.password = SecureRandom.hex(4)
